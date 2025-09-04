@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-quicksand: "Quicksand", sans-serif;
+
+  --animate-arriba: arriba 1s ease-in-out;
+  --animate-abajo: abajo 1s ease-in-out;
+
+  @keyframes arriba {
+    0% {
+      transform: translateY(-800px);
+      opacity: 0;
+    }
+    ,
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes abajo {
+    0% {
+      transform: translateY(800px);
+      opacity: 0;
+    }
+    ,
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}

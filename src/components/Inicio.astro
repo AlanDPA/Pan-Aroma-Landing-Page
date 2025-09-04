@@ -1,0 +1,21 @@
+---
+import Image from "astro/components/Image.astro"
+import PanHuevo01 from "../assets/diferente-pan-huevo-01.png"
+import PanHuevo02 from "../assets/diferente-pan-huevo-02.png"
+---
+
+<section id="inicio" class="min-sm:min-h-[95vh] max-sm:h-[700px] max-sm:min-h-[60vh] flex items-center justify-center relative overflow-hidden">
+    <div class="flex flex-col gap-4 items-center justify-between max-lg:px-5 relative z-40 p-5 m-5 overflow-hidden">
+        
+        <h2 class="text-6xl text-amber-600 max-xl:text-5xl max-sm:text-4xl text-center font-bold relative z-20">El aroma del pan recién horneado</h2>
+    <h3 class="text-xl max-xl:text-lg max-sm:text-sm text-center italic font-semibold relative z-20">Pan artesanal hecho cada mañana con ingredientes naturales</h3>
+    <div class="relative z-20">
+        <button class="text-2xl text-amber-600 max-xl:text-xl max-sm:text-lg px-4 py-2 bg-stone-900 transition duration-100 ease-in-out hover:bg-stone-800 scale-100 hover:scale-110 cursor-pointer active:bg-stone-700 focus:outline-0 animate-bounce rounded-lg">Ver productos</button>
+    </div>
+    </div>
+    <div class="w-full h-full absolute z-30 bg-gradient-to-b from-transparent via-amber-100 to-transparent"></div>
+    <div class="w-full h-full absolute z-20 flex flex-col justify-between overflow-hidden">
+        <Image id="image01" src={PanHuevo01} alt="Pan horneado" class=" object-cover w-full animate-arriba" loading="eager"/>
+        <Image id="image02" src={PanHuevo02} alt="Pan horneado" class=" object-cover w-full animate-abajo" loading="eager"/>
+    </div>
+</section>
