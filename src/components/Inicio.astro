@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets"
-import PanHuevo01 from "../assets/diferente-pan-huevo-01.png"
-import PanHuevo02 from "../assets/diferente-pan-huevo-02.png"
+import PanHuevoTop from "../assets/diferente-pan-huevo-top.png"
+import PanHuevoBot from "../assets/diferente-pan-huevo-bot.png"
 ---
 
 <section id="inicio" class="min-sm:min-h-[95vh] max-sm:h-[700px] max-sm:min-h-[60vh] flex items-center justify-center relative overflow-hidden">
@@ -15,7 +15,7 @@ import PanHuevo02 from "../assets/diferente-pan-huevo-02.png"
     </div>
     <div class="w-full h-full absolute z-30 bg-gradient-to-b from-transparent via-amber-100 to-transparent"></div>
     <div class="w-full h-full absolute z-20 flex flex-col justify-between overflow-hidden">
-        <Image id="image01" src={PanHuevo01} alt="Pan horneado" class=" object-cover w-full animate-arriba" loading="eager"/>
-        <Image id="image02" src={PanHuevo02} alt="Pan horneado" class=" object-cover w-full animate-abajo" loading="eager"/>
+        <Image id="image01" src={PanHuevoTop} alt="Pan horneado" class=" object-cover w-full animate-arriba" loading="eager"/>
+        <Image id="image02" src={PanHuevoBot} alt="Pan horneado" class=" object-cover w-full animate-abajo" loading="eager"/>
     </div>
 </section>
