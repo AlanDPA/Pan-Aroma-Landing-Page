@@ -33,3 +33,24 @@
     }
   }
 }
+
+ .splide__arrow {
+   @apply bg-stone-400
+  
+}
+
+.splide__arrow svg {
+  @apply fill-amber-50
+}
+
+.splide__arrow:hover {
+  @apply bg-amber-600
+}
+
+.splide__pagination__page {
+  @apply bg-stone-400
+}
+
+.splide__pagination__page.is-active {
+  @apply bg-amber-600
+}
