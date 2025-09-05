@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import "tailwindcss";
 
+@import "@splidejs/splide/dist/css/splide.min.css";
+
 @theme {
   --font-quicksand: "Quicksand", sans-serif;
 
