@@ -8,13 +8,14 @@
 
   --animate-arriba: arriba 1s ease-in-out;
   --animate-abajo: abajo 1s ease-in-out;
+  --animate-izquierda: izquierda 1s ease-in-out;
 
   @keyframes arriba {
     0% {
       transform: translateY(-800px);
       opacity: 0;
     }
-    ,
+
     100% {
       transform: translateY(0px);
       opacity: 1;
@@ -26,7 +27,6 @@
       transform: translateY(800px);
       opacity: 0;
     }
-    ,
     100% {
       transform: translateY(0px);
       opacity: 1;
@@ -34,23 +34,33 @@
   }
 }
 
- .splide__arrow {
-   @apply bg-stone-400
-  
+@keyframes izquierda {
+  0% {
+    transform: translateX(5000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.splide__arrow {
+  @apply bg-stone-400;
 }
 
 .splide__arrow svg {
-  @apply fill-amber-50
+  @apply fill-amber-50;
 }
 
 .splide__arrow:hover {
-  @apply bg-amber-600
+  @apply bg-amber-600;
 }
 
 .splide__pagination__page {
-  @apply bg-stone-400
+  @apply bg-stone-400;
 }
 
 .splide__pagination__page.is-active {
-  @apply bg-amber-600
+  @apply bg-amber-600;
 }
