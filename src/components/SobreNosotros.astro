@@ -1,26 +1,53 @@
 ---
 import { Image } from "astro:assets";
-import FondoSeccion from "../assets/arreglo-plano-de-productos-horneados-veganos.avif"
+import FondoSeccion from "../assets/arreglo-plano-de-productos-horneados-veganos.avif";
+import Panadero from "../assets/feliz-joven-panadero-sosteniendo-poco-pan.avif";
 ---
 
 <section
   id="sobre-nosotros"
-  class="overflow-hidden p-10 mx-auto h-[95vh] max-h-[900px] grid grid-cols-3 relative"
+  class="overflow-hidden max-sm:py-5 max-sm:px-0 max-md:p-10 p-20  mx-auto max-h-[900px] relative"
 >
-  <div class="col-start-2 col-span-2 h-full flex flex-col justify-center items-center relative z-30">
-    <div class="flex flex-col gap-2 justify-center p-10 bg-white max-w-[800px] animate-izquierda">
-      <h2 class="text-3xl text-left font-bold">Nuestra tradición</h2>
-      <p class="text-left">
-        En Pan Aroma creemos que el buen pan empieza con ingredientes sencillos
-        y naturales. Cada mañana horneamos nuestras piezas con dedicación,
-        buscando ese aroma y sabor casero que nos conecta con lo auténtico.
-      </p>
-      <p>
-        Nuestra misión es ofrecerte panes frescos, postres y acompañamientos que
-        llenen de calidez tu mesa y conviertan cada momento en especial.
-      </p>
+  <div class="relative z-30 h-full flex items-center">
+    <div
+      class="relative mx-auto w-[1150px] flex max-lg:flex-row flex-col max-lg:flex-wrap min-sm:items-end min-sm:justify-end justify-center overflow-hidden max-sm:gap-5"
+    >
+      <div
+        class="max-sm:h-[250px] max-sm:w-[250px] max-lg:h-1/2 max-lg:w-1/4 max-lg:relative min-lg:h-full min-lg:w-[450px] min-lg:absolute min-lg:bottom-0 min-lg:-left-6 min-xl:left-0 z-10 overflow-hidden"
+      >
+        <Image
+          class="object-contain max-sm:object-center object-bottom-left min-xl:object-bottom-right h-full w-full drop-shadow-lg drop-shadow-amber-100"
+          src={Panadero}
+          alt="Panadero"
+        />
+      </div>
+
+      <h2
+        class="relative max-sm:text-5xl max-lg:text-8xl text-9xl text-amber-50 max-sm:text-center text-right font-bold max-sm:w-full w-3/4 max-sm:px-5"
+      >
+        Nuestra tradición
+      </h2>
+
+      <div
+        class="relative z-0 p-5 max-sm:mx-5 min-sm:px-14 min-sm:py-7 min-lg:px-20 min-lg:py-14 bg-amber-50 min-lg:w-3/4 w-full animate-izquierda"
+      >
+        <p class="text-left max-sm:text-center max-md:text-sm">
+          En <strong class="text-amber-600">Pan Aroma</strong> creemos que el buen
+          pan empieza con ingredientes sencillos y naturales. Cada mañana horneamos
+          nuestras piezas con dedicación, buscando ese aroma y sabor casero que nos
+          conecta con lo auténtico.
+        </p>
+        <p class="text-left max-sm:text-center max-md:text-sm">
+          Nuestra misión es ofrecerte panes frescos, postres y acompañamientos
+          que llenen de calidez tu mesa y conviertan cada momento en especial.
+        </p>
+      </div>
     </div>
   </div>
-  <Image src={FondoSeccion} alt="Fondo" class="absolute z-10 w-full h-full object-cover"/>
-  <div class="absolute w-full h-full bg-stone-700/70 z-20"></div>
+  <Image
+    src={FondoSeccion}
+    alt="Fondo"
+    class="absolute z-10 w-full h-full object-cover top-0 left-0"
+  />
+  <div class="absolute w-full h-full bg-stone-700/70 z-20 top-0 left-0"></div>
 </section>
