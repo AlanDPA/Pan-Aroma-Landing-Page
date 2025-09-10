@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.avif";
+---
+
+<section class="bg-stone-900 text-amber-50 max-w-[1920px]">
+  <div class="max-w-[1500px] mx-auto min-sm:px-20 py-20 p-5 grid grid-cols-2 max-lg:grid-cols-1 max-lg:gap-10">
+    <div class="flex flex-col gap-10 justify-center items-baseline">
+      <h3 class="text-4xl text-center">Visítanos</h3>
+      <ul class="flex flex-col gap-5 justify-center text-left">
+        <li><strong>Dirección: </strong>Av. Sabores 123, Lima, Perú</li>
+        <li>
+          <strong>Horario: </strong>Lunes a sábado: 7am – 8pm | Domingo: 8am –
+          2pm
+        </li>
+        <li><strong>Teléfono: </strong>(01) 456-7890</li>
+      </ul>
+      <div class="flex flex-row gap-2">
+        <h2 class="text-2xl font-semibold">Pan Aroma</h2>
+        <Image
+          src={Logo}
+          alt="Logo"
+          class="w-[32px] h-[32px] drop-shadow-sm drop-shadow-amber-50 mx-auto"
+        />
+      </div>
+    </div>
+    <hr class="bg-amber-50 min-lg:hidden">
+    <div class="flex flex-col justify-start items-end max-lg:items-start gap-5">
+        <h3 class="text-3xl">Haz tu pedido ahora y disfruta Pan Aroma</h3>
+        <div class="flex">
+            <a class="py-2 px-4 rounded-lg text-2xl bg-amber-600 hover:scale-105 transition ease-in-out hover:bg-amber-700" href="#">Hacer pedido</a>
+        </div>
+    </div>
+  </div>
+</section>
