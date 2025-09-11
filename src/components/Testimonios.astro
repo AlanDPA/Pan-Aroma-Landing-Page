@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import HombreSorprendido from "../assets/hombre-hispano.avif";
+---
+
+<section class="max-w-[1920px] py-20 px-5">
+  <article
+    class="max-w-[1500px] h-full grid min-sm:grid-cols-2 justify-items-center items-center gap-5 mx-auto"
+  >
+    <div class="w-full h-full col-span-1 flex flex-col justify-between gap-5">
+      <h2 class="max-sm:text-4xl text-6xl font-bold max-sm:text-center text-left">
+        Lo que dicen nuestros clientes
+      </h2>
+      <Image
+        src={HombreSorprendido}
+        alt="Hombre Sorprendido"
+        class="w-full object-fill drop-shadow-lg drop-shadow-stone-900"
+      />
+    </div>
+
+    <div
+      class="splide splide-testimonios w-full h-full col-span-1 flex justify-between items-center text-amber-50"
+      aria-label="Testimonios"
+    >
+      <div class="splide__track w-full">
+        <ul class="splide__list">
+          <li
+            class="splide__slide bg-stone-900 p-5 w-full flex flex-col justify-between"
+          >
+            <span class="material-symbols-outlined size40"> format_quote </span>
+            <p class="line-clamp-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              maxime explicabo assumenda inventore at quis culpa voluptatem
+              omnis quas, nam odit itaque dolore dignissimos voluptatum ea enim,
+              ullam veniam atque!
+            </p>
+            <h3 class="text-xl text-right font-bold">Vanessa Verotti</h3>
+          </li>
+          <li
+            class="splide__slide bg-stone-900 p-5 w-full flex flex-col justify-between"
+          >
+            <span class="material-symbols-outlined size40"> format_quote </span>
+            <p class="line-clamp-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              maxime explicabo assumenda inventore at quis culpa voluptatem
+              omnis quas, nam odit itaque dolore dignissimos voluptatum ea enim,
+              ullam veniam atque!
+            </p>
+            <h3 class="text-xl text-right font-bold">Rubén Vertiz</h3>
+          </li>
+          <li
+            class="splide__slide bg-stone-900 p-5 w-full flex flex-col justify-between"
+          >
+            <span class="material-symbols-outlined size40"> format_quote </span>
+            <p class="line-clamp-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              maxime explicabo assumenda inventore at quis culpa voluptatem
+              omnis quas, nam odit itaque dolore dignissimos voluptatum ea enim,
+              ullam veniam atque!
+            </p>
+            <h3 class="text-xl text-right font-bold">Marco Dionisio</h3>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
+
+<script>
+  import Splide from "@splidejs/splide";
+
+  var splide_testimonios = new Splide(".splide-testimonios", {
+    direction: "ttb",
+    height: "40rem",
+    waitForTransition: true,
+    type: "loop",
+    perPage: 3,
+    gap: "1rem",
+    arrows: false,
+    breakpoints: {
+      768: {
+        perPage: 2,
+      },
+        640: {
+          height: "20rem",
+          perPage: 1,
+        },
+      },
+  });
+
+  splide_testimonios.mount();
+</script>
