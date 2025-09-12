@@ -32,6 +32,7 @@ span.size48 {
   --animate-arriba: arriba 1s ease-in-out;
   --animate-abajo: abajo 1s ease-in-out;
   --animate-izquierda: izquierda 1s ease-in-out;
+  --animate-derecha: derecha 1s ease-in-out;
 
   @keyframes arriba {
     0% {
@@ -60,6 +61,17 @@ span.size48 {
 @keyframes izquierda {
   0% {
     transform: translateX(5000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes derecha {
+  0% {
+    transform: translateX(-5000px);
     opacity: 0;
   }
   100% {

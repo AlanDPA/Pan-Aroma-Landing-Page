@@ -6,7 +6,7 @@ import Panadero from "../assets/feliz-joven-panadero-sosteniendo-poco-pan.avif";
 
 <section
   id="sobre-nosotros"
-  class="overflow-hidden py-40 px-5  mx-auto relative"
+  class="overflow-hidden py-40 px-5 mx-auto relative"
 >
   <div class="relative z-30 h-full flex items-center">
     <div
@@ -16,6 +16,7 @@ import Panadero from "../assets/feliz-joven-panadero-sosteniendo-poco-pan.avif";
         class="max-sm:h-[250px] max-sm:w-[250px] max-lg:h-1/2 max-lg:w-1/4 max-lg:relative min-lg:h-full min-lg:w-[450px] min-lg:absolute min-lg:bottom-0 min-lg:-left-6 min-xl:left-0 z-10 overflow-hidden"
       >
         <Image
+          id="imagen"
           class="object-contain max-sm:object-center object-bottom-left min-xl:object-bottom-right h-full w-full drop-shadow-lg drop-shadow-amber-100"
           src={Panadero}
           alt="Panadero"
@@ -23,13 +24,15 @@ import Panadero from "../assets/feliz-joven-panadero-sosteniendo-poco-pan.avif";
       </div>
 
       <h2
+      id="texto02"
         class="relative max-sm:text-5xl max-lg:text-8xl text-9xl text-amber-50 max-sm:text-center text-right font-bold max-sm:w-full w-3/4"
       >
         Nuestra tradición
       </h2>
 
       <div
-        class="relative z-0 p-5 min-sm:px-14 min-sm:py-7 min-lg:px-20 min-lg:py-14 bg-amber-50 min-lg:w-3/4 w-full animate-izquierda"
+        id="texto01"
+        class="relative z-0 p-5 min-sm:px-14 min-sm:py-7 min-lg:px-20 min-lg:py-14 bg-amber-50 min-lg:w-3/4 w-full"
       >
         <p class="text-left max-sm:text-center max-md:text-sm">
           En <strong class="text-amber-600">Pan Aroma</strong> creemos que el buen
@@ -51,3 +54,27 @@ import Panadero from "../assets/feliz-joven-panadero-sosteniendo-poco-pan.avif";
   />
   <div class="absolute w-full h-full bg-stone-900/50 z-20 top-0 left-0"></div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const texto01 = document.getElementById("texto01");
+    const texto02 = document.getElementById("texto02");
+    const imagen = document.getElementById("imagen");
+
+    const observador = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          imagen?.classList.add("animate-derecha");
+          texto01?.classList.add("animate-izquierda");
+          texto02?.classList.add("animate-izquierda");
+        }
+      });
+    });
+
+    if (texto01 && texto02 && imagen) {
+      observador.observe(texto01);
+      observador.observe(texto02);
+      observador.observe(imagen);
+    }
+  });
+</script>
